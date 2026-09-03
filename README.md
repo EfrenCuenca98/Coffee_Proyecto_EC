@@ -7,7 +7,7 @@ Sarchimor, Typica) a partir de fotografías de hojas capturadas in situ,
 mediante segmentación de instancias (YOLOv8n-seg) y una caracterización
 morfológica explícita de color, forma y textura.
 
-**Autor:** [Efren Alexander Cuenca Jiménez]
+**Autor:** Efrén Alexander Cuenca Jiménez
 **Director:** Ing. Marcelo Valdiviezo
 **Institución:** Universidad Nacional de Loja — Grupo de Investigación (Proyecto Dataset de Café)
 
@@ -31,7 +31,6 @@ correspondiente del informe de tesis.
 
 | Carpeta / Script | Qué hace | Entrada | Salida | Sección de la tesis |
 |---|---|---|---|---|
-
 | `01_captura_y_etiquetado/renombrar_fotos.py` | Renombra las fotografías capturadas en campo al formato estándar `FECHA_ARA_VARIEDAD_###.jpg` | Fotos crudas de la cámara/teléfono | Fotos renombradas | 6.1.3 (Tarea 3) |
 | `02_extraccion_descriptores/descriptores_v2.py` | Módulo compartido: funciones de color (HSV), forma (contorno) y textura (GLCM), más el ajuste y clasificación con Modelos de Mezcla Gaussiana | — (es un módulo, se importa) | — | 5.2.4, 6.2.4, 6.2.5 |
 | `02_extraccion_descriptores/extraer_morfologia_v2.py` | Recorre el dataset (train/valid/test), calcula los 15 descriptores morfológicos de cada hoja anotada y exporta el CSV | Imágenes + etiquetas `.txt` (polígonos YOLO) | `descriptores_por_hoja_v2.csv`, `resumen_morfologia_por_variedad_v2.csv` | 6.2.4 |
@@ -51,13 +50,9 @@ automático para Windows, `iniciar_interfaz.bat`) y su propio `requirements.txt`
 más pequeño que el de esta raíz porque solo incluye lo que la aplicación
 necesita.
 
-Esto abrirá la aplicación en tu navegador. Sube una fotografía de una hoja de
-café y obtén su variedad, junto con una descripción de su color, forma y
-textura. No necesitas saber nada sobre el resto del pipeline (entrenamiento,
-extracción de descriptores, etc.) para usarla — el resto de este README
-documenta cómo se construyó el modelo, no cómo se usa la app.
+Esto abrirá la aplicación en tu navegador. Sube una fotografía de una hoja de café y obtén su variedad, junto con una descripción de su color, forma y textura. No necesitas saber nada sobre el resto del pipeline (entrenamiento, extracción de descriptores, etc.) para usarla — el resto de este README documenta cómo se construyó el modelo, no cómo se usa la app.
 
-## Si requieres Entrenar y obtener un nuevo modelo con tu porpio Dataset antes de ejecutar configura tus propias rutas
+## Si requieres Entrenar y obtener un nuevo modelo con tu propio Dataset antes de ejecutar configura tus propias rutas
 
 **Ningún script funcionará tal cual si solo lo clonas y lo corres.** Todas las rutas
 (carpetas de Google Drive, rutas de Windows) están escritas con la organización de
@@ -81,7 +76,7 @@ Checklist de archivos con rutas que debes revisar:
 
 ```bash
 # 1. Clonar y preparar el entorno
-git clone https://github.com/EfrenCuenca98/Coffee_Proyecto_EC.git
+git clone [https://github.com/EfrenCuenca98/Coffee_Proyecto_EC.git](https://github.com/EfrenCuenca98/Coffee_Proyecto_EC.git)
 cd tesis-clasificacion-cafe
 pip install -r requirements.txt
 
@@ -100,30 +95,3 @@ python 03_aumento_datos/aumento_balanceado_pil.py
 
 # 7. Aplicación de demostración
 streamlit run 06_aplicacion_demo/app.py
-```
-
-## Dataset y pesos del modelo
-
-El conjunto de datos de imágenes (2 310 fotografías)  **no se incluyen en este repositorio** por su
-tamaño. Están disponibles en:
-
-- Dataset: [https://drive.google.com/drive/folders/1hgqTZRoYqFYhpWWHC8FN7zyP-37acvzR?usp=sharing]
-
-Dataset fue transferido como activo intangible al Grupo de Investigación..
-..(Proyecto Dataset de Café) de la Universidad Nacional de Loja.
-
-## Requisitos
-
-Ver `requirements.txt`. Resumen de las bibliotecas principales:
-
-- `ultralytics` (YOLOv8)
-- `opencv-python`, `scikit-image` (extracción de descriptores)
-- `scikit-learn` (modelos de mezcla gaussiana)
-- `streamlit` (aplicación de demostración)
-- `pandas`, `numpy`, `matplotlib`
-
-## Citar este trabajo
-
-[Efrén Alexander Cuenca Jiménez]. (2026). *Clasificación Automática de variedades de 
-café mediante procesamiento de imágenes y modelos de Machine Learning* [Trabajo de integración
-curricular, Universidad Nacional de Loja].
