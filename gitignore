@@ -1,0 +1,37 @@
+# --- Entornos virtuales (los crea iniciar_interfaz.bat, NO deben subirse) ---
+.venv/
+venv/
+env/
+
+# --- Dataset de imágenes crudo (demasiado pesado; NO es lo mismo que el
+#     modelo ya entrenado, que sí se sube dentro de 06_aplicacion_demo/modelo/)
+Dataset YOLOv8/
+Dataset_Augmentation_Balanceado/
+*.jpg
+*.jpeg
+*.png
+*.webp
+# Excepción: sí se suben las figuras ya generadas para el Marco Teórico
+!figuras_marco_teorico/**/*.png
+
+# --- Cachés y compilados de Python -------------------------------------------
+__pycache__/
+*.pyc
+*.egg-info/
+
+# --- Notebooks: checkpoints de Jupyter ---------------------------------------
+.ipynb_checkpoints/
+
+# --- Sistema operativo --------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Credenciales / configuración local --------------------------------------
+.env
+*.key
+
+# NOTA: a propósito NO se excluyen *.pt ni *.csv de forma general, porque
+# 06_aplicacion_demo/modelo/best_cafe_yolov8_seg.pt y
+# 06_aplicacion_demo/datos/descriptores_por_hoja_v2.csv SÍ deben subirse:
+# son parte necesaria del producto final para el Grupo de Investigación.

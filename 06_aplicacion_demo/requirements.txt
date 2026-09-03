@@ -1,0 +1,10 @@
+streamlit
+ultralytics
+opencv-python
+scikit-image
+scikit-learn
+pandas
+numpy
+matplotlib
+Pillow
+openpyxl
