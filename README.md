@@ -38,7 +38,7 @@ correspondiente del informe de tesis.
 | `04_entrenamiento/entrenamiento_yolov8_seg.ipynb` | Entrena YOLOv8n-seg mediante transferencia de aprendizaje sobre el dataset aumentado. Contiene únicamente la rutina de entrenamiento (`model.train(...)`) | `data.yaml`, pesos preentrenados COCO | `best_cafe_yolov8_seg.pt` | 6.3.1 – 6.3.3 |
 | `05_evaluacion/evaluacion_metricas_matrices.ipynb` | Carga el modelo ya entrenado y ejecuta `model.val(...)` para obtener las métricas y las gráficas de evaluación (matrices de confusión, curvas F1 y precisión-exhaustividad) | `best_cafe_yolov8_seg.pt`, `data.yaml` | Métricas (Tablas 14-15), matrices de confusión (Figuras 23-24) | 6.3.4 – 6.3.6 |
 | `06_aplicacion_demo/app.py` | Aplicación Streamlit de demostración: segmenta imágenes nuevas, extrae descriptores, clasifica y aplica el filtro de plausibilidad morfológica (Mahalanobis) | Imágenes nuevas, modelo entrenado, CSV base | Reporte visual + CSV/Excel exportable | 6.3.7, 6.3.8 |
-| `06_aplicacion_demo/descriptores_v2.py` | Misma función que en `02_extraccion_descriptores/`, importada aquí porque la app la necesita para calcular los descriptores de cada hoja nueva en tiempo real | — (es un módulo, se importa) | — | 5.2.4 |
+| `06_aplicacion_demo/descriptores_v2.py` | Misma función que en `02_extraccion_descriptores/`, importada aquí porque la app la necesita para calcular los descriptores de cada hoja nueva en tiempo real | (es un módulo, se importa) | — | 5.2.4 |
 | `07_figuras_marco_teorico/` | Scripts independientes para regenerar las figuras del Marco Teórico a partir de una hoja del dataset | Una imagen + su `.txt` | Figuras `.png` del capítulo 4 | 4.5.2, 4.5.4.1, 4.5.4.3, 4.6.1 |
 
 ## ¿Solo quieres usar el clasificador, sin entrenar ni reproducir nada?
