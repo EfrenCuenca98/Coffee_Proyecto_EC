@@ -32,7 +32,7 @@ correspondiente del informe de tesis.
 | Carpeta / Script | Qué hace | Entrada | Salida | Sección de la tesis |
 |---|---|---|---|---|
 | `01_captura_y_etiquetado/renombrar_fotos.py` | Renombra las fotografías capturadas en campo al formato estándar `FECHA_ARA_VARIEDAD_###.jpg` | Fotos crudas de la cámara/teléfono | Fotos renombradas | 6.1.3 (Tarea 3) |
-| `02_extraccion_descriptores/descriptores_v2.py` | Módulo compartido: funciones de color (HSV), forma (contorno) y textura (GLCM), más el ajuste y clasificación con Modelos de Mezcla Gaussiana | — (es un módulo, se importa) | — | 5.2.4, 6.2.4, 6.2.5 |
+| `02_extraccion_descriptores/descriptores_v2.py` | Módulo compartido: funciones de color (HSV), forma (contorno) y textura (GLCM), más el ajuste y clasificación con Modelos de Mezcla Gaussiana | (es un módulo, se importa) | — | 5.2.4, 6.2.4, 6.2.5 |
 | `02_extraccion_descriptores/extraer_morfologia_v2.py` | Recorre el dataset (train/valid/test), calcula los 15 descriptores morfológicos de cada hoja anotada y exporta el CSV | Imágenes + etiquetas `.txt` (polígonos YOLO) | `descriptores_por_hoja_v2.csv`, `resumen_morfologia_por_variedad_v2.csv` | 6.2.4 |
 | `03_aumento_datos/aumento_balanceado_pil.py` | Aplica aumento de datos balanceado (rotación, volteo, brillo/contraste/saturación) solo al subconjunto de entrenamiento, e incorpora las imágenes negativas | Dataset particionado (train/valid/test) | Dataset aumentado + `data.yaml` | 6.2.6 |
 | `04_entrenamiento/entrenamiento_yolov8_seg.ipynb` | Entrena YOLOv8n-seg mediante transferencia de aprendizaje sobre el dataset aumentado. Contiene únicamente la rutina de entrenamiento (`model.train(...)`) | `data.yaml`, pesos preentrenados COCO | `best_cafe_yolov8_seg.pt` | 6.3.1 – 6.3.3 |
@@ -43,7 +43,7 @@ correspondiente del informe de tesis.
 
 ## ¿Solo quieres usar el clasificador, sin entrenar ni reproducir nada?
 
-Ve directo a la carpeta `06_aplicacion_demo/` — ahí está todo lo necesario para
+Ve directo a la carpeta `06_aplicacion_demo/`  ahí está todo lo necesario para
 correr la interfaz, sin tocar el resto del repositorio. Esa carpeta tiene su
 propio `README.md` con instrucciones más detalladas (incluido un instalador
 automático para Windows, `iniciar_interfaz.bat`) y su propio `requirements.txt`,
