@@ -43,7 +43,7 @@ correspondiente del informe de tesis.
 
 ## ¿Solo quieres usar el clasificador, sin entrenar ni reproducir nada?
 
-Ve directo a la carpeta `06_aplicacion_demo/`  ahí está todo lo necesario para
+Ve directo a la carpeta `06_aplicacion_demo/`, ahí está todo lo necesario para
 correr la interfaz, sin tocar el resto del repositorio. Esa carpeta tiene su
 propio `README.md` con instrucciones más detalladas (incluido un instalador
 automático para Windows, `iniciar_interfaz.bat`) y su propio `requirements.txt`,
@@ -58,7 +58,7 @@ Esto abrirá la aplicación en tu navegador. Sube una fotografía de una hoja de
 (carpetas de Google Drive, rutas de Windows) están escritas con la organización de
 carpetas del autor original. Antes de correr cualquier archivo, busca el bloque marcado
 como `CONFIGURACIÓN` al inicio de cada script o notebook, y cambia esas rutas por las
-tuyas. No es necesario que crees carpetas con los mismos nombres  solo que las rutas
+tuyas. No es necesario que crees carpetas con los mismos nombres,  solo que las rutas
 apunten a donde tú tengas tus propios archivos.
 
 Checklist de archivos con rutas que debes revisar:
@@ -69,7 +69,7 @@ Checklist de archivos con rutas que debes revisar:
 | `03_aumento_datos/aumento_balanceado_pil.py` | Carpeta de origen y destino del dataset |
 | `04_entrenamiento/entrenamiento_yolov8_seg.ipynb` | `RUTA_MODELO`, `RUTA_YAML` |
 | `05_evaluacion/evaluacion_metricas_matrices.ipynb` | `BEST_MODEL`, `RUTA_CSV_BASE`, `CARPETA_MODULOS`, `DATA_YAML`, `CARPETA_RESULTADOS` |
-| `06_aplicacion_demo/app.py` | Ninguna ya resuelve las rutas automáticamente respecto a su propia ubicación. Solo asegúrate de que existan las carpetas `modelo/` y `datos/` junto a `app.py`, con esos nombres exactos |
+| `06_aplicacion_demo/app.py` | Ninguna, ya resuelve las rutas automáticamente respecto a su propia ubicación. Solo asegúrate de que existan las carpetas `modelo/` y `datos/` junto a `app.py`, con esos nombres exactos |
 | `figuras_marco_teorico/*.py` | `RUTA_IMAGEN`, `RUTA_ETIQUETA` en cada script |
 
 ## Cómo reproducir el pipeline completo
